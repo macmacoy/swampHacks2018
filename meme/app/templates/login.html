@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+   <!-- <link rel="stylesheet" href="../static/styles/main.css"> -->
    <title>Meme Compatibility Quiz</title>
 </head>
 <body>
@@ -66,13 +67,13 @@
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '188942655024739',
-      cookie     : true,  // enable cookies to allow the server to access 
+      cookie     : true,  // enable cookies to allow the server to access
                           // the session
       xfbml      : true,  // parse social plugins on this page
       version    : 'v2.11' // use graph api version 2.8
     });
 
-    // Now that we've initialized the JavaScript SDK, we call 
+    // Now that we've initialized the JavaScript SDK, we call
     // FB.getLoginStatus().  This function gets the state of the
     // person visiting this page and can return one of three states to
     // the callback you provide.  They can be:
@@ -89,34 +90,34 @@
     });
 
     FB.Event.subscribe('auth.authResponseChange', function(response) {
-      // Here we specify what we do with the response anytime this event occurs. 
+      // Here we specify what we do with the response anytime this event occurs.
       if (response.status === 'connected') {
         // The response object is returned with a status field that lets the app know the current
-        // login status of the person. In this case, we're handling the situation where they 
+        // login status of the person. In this case, we're handling the situation where they
         // have logged in to the app.
         var uid = response.authResponse.userID;
         var accessToken = response.authResponse.accessToken;
 
         post('/', {access_token: accessToken, user_id: uid})
         setTimeout(check, 1000);
-        
+
         window.location = 'http://localhost:5000/quiz/1';
 
         testAPI();
       } else if (response.status === 'not_authorized') {
         // In this case, the person is logged into Facebook, but not into the app, so we call
-        // FB.login() to prompt them to do so. 
-        // In real-life usage, you wouldn't want to immediately prompt someone to login 
+        // FB.login() to prompt them to do so.
+        // In real-life usage, you wouldn't want to immediately prompt someone to login
         // like this, for two reasons:
-        // (1) JavaScript created popup windows are blocked by most browsers unless they 
+        // (1) JavaScript created popup windows are blocked by most browsers unless they
         // result from direct interaction from people using the app (such as a mouse click)
         // (2) it is a bad experience to be continually prompted to login upon page load.
         FB.login();
       } else {
-        // In this case, the person is not logged into Facebook, so we call the login() 
+        // In this case, the person is not logged into Facebook, so we call the login()
         // function to prompt them to do so. Note that at this stage there is no indication
         // of whether they are logged into the app. If they aren't then they'll see the Login
-        // dialog right after they log in to Facebook. 
+        // dialog right after they log in to Facebook.
         // The same caveats as above apply to the FB.login() call here.
         FB.login();
       }
@@ -155,5 +156,5 @@
       </div>
    </div>
 
-</body>  
+</body>
 </html>

@@ -1,6 +1,13 @@
 html, body{
    margin: 0;
    background: #222;
+   overflow-x: hidden;
+}
+
+#wrapper{
+   background: green;
+   width: 100vw;
+   height: 100vh;
 }
 
 .picture_q{
@@ -8,7 +15,12 @@ html, body{
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background: #222;
+   background: blue;
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
 }
 
 .simple_q{
@@ -18,7 +30,11 @@ html, body{
    align-items: center;
    background: #222;
    color: white;
-   margin-top: calc(50vh - 150px);
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
 }
 form{
    display: flex;
@@ -27,6 +43,23 @@ form{
    align-items: flex-start;
    height: 120px;
    color: white;
+   font-family: 'Noto Serif', serif;
+}
+h2{
+   font-family: impact;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
 }
 input[type=submit] {
    align-self: center;

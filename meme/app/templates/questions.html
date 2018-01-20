@@ -5,12 +5,37 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+   <!-- <link rel="stylesheet" href="../static/styles/quiz.css"> -->
+   <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
    <title>Meme Compatibility Quiz</title>
 </head>
 <body>
-	<form action="" method="post" name="enterAnswer">
-	  1 or 2:<br>
-	  <input type="text" name="answer" value="1"><br>
-	  <input type="submit" value="Submit">
-	</form>
+
+<div id="wrapper">
+
+   <div class="picture_q">
+      <img src="" alt="">
+      <img src="" alt="">
+      <p></p>
+   </div>
+
+   <div class="simple_q">
+      <h2>What is your age?</h2>
+      <form action="" method="post" name="question">
+         <div class="option">
+            <input type="radio" name="option" value="1" checked>
+            At least 7
+         </div>
+         <div class="option">
+            <input type="radio" name="option" value="2">
+         	82
+         </div>
+         <div class="option">
+            <input type="radio" name="option" value="3">
+         	My parents didn't give me an age
+         </div>
+        <input type="submit" value="Submit">
+      </form>
+   </div>
+</div>
 </body>
