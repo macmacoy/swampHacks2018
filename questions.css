@@ -1,0 +1,33 @@
+html, body{
+   margin: 0;
+   background: #222;
+}
+
+.picture_q{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: #222;
+}
+
+.simple_q{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: #222;
+   color: white;
+   margin-top: calc(50vh - 150px);
+}
+form{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: flex-start;
+   height: 120px;
+   color: white;
+}
+input[type=submit] {
+   align-self: center;
+}
