@@ -18,6 +18,33 @@ html, body{
 }
 h1{
    margin: 0;
+   animation-name: textColor;
+   animation-duration: 5s;
+   animation-iteration-count:infinite;
+   /* animation-direction: alternate; */
+   font-size: 2em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: impact;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
+}
+@keyframes textColor {
+    0% {color: SpringGreen;}
+    25% {color: red;}
+    50% {color: yellow;}
+    75% {color: blue;}
+    100% {color: pink;}
 }
 
 
