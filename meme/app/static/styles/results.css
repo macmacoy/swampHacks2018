@@ -1,0 +1,50 @@
+html, body{
+   margin: 0;
+   background: #222;
+}
+h2{
+   color: white;
+   font-size: 3em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#bff{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding: 40px;
+   background: SpringGreen;
+}
+#bff img{
+   border-radius: 100px;
+}
+#bff p{
+   margin: 20px;
+   color: #222;
+   font-size: 1.5em;
+}
+#other_friends{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   padding: 20px;
+   background: #222;
+}
+#other_friends img{
+   border-radius: 100px;
+}
+#other_friends p{
+   margin: 20px;
+   color: white;
+   font-size: 1em;
+}
+.friend{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
